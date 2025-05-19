@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索引擎导航 | 快速访问各大搜索平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4cc9f0;
+            --warning-color: #f8961e;
+            --danger-color: #f72585;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            background: linear-gradient(to right, #4361ee, #3a0ca3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .search-engines {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .engine-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .engine-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .engine-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            background: white;
+            padding: 0.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .engine-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .engine-desc {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            border: 1px solid #dee2e6;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 2rem auto 3rem;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            padding-right: 50px;
+        }
+        
+        .search-input:focus {
+            box-shadow: 0 5px 20px rgba(67, 97, 238, 0.2);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .search-btn:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .search-engines {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>搜索引擎导航</h1>
+            <p class="subtitle">快速访问全球主流搜索引擎，选择最适合您的搜索工具</p>
+        </header>
+        
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="输入关键词搜索..." id="globalSearch">
+            <button class="search-btn" id="searchButton">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+        <div class="search-engines">
+            <!-- Google -->
+            <div class="engine-card">
+                <img src="https://www.google.com/images/branding/product/1x/gsa_512dp.png" alt="Google" class="engine-logo">
+                <h3 class="engine-name">Google</h3>
+                <p class="engine-desc">全球最流行的搜索引擎，提供网页、图片、视频等多种搜索服务</p>
+                <a href="https://www.google.com" target="_blank" class="btn btn-primary">访问 Google</a>
+            </div>
+            
+            <!-- Bing -->
+            <div class="engine-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Bing_logo_%282016%29.svg/1200px-Bing_logo_%282016%29.svg.png" alt="Bing" class="engine-logo">
+                <h3 class="engine-name">Bing</h3>
+                <p class="engine-desc">微软推出的搜索引擎，集成AI技术，提供优质的搜索体验</p>
+                <a href="https://www.bing.com" target="_blank" class="btn btn-primary">访问 Bing</a>
+            </div>
+            
+            <!-- 百度 -->
+            <div class="engine-card">
+                <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="百度" class="engine-logo">
+                <h3 class="engine-name">百度</h3>
+                <p class="engine-desc">中国最大的搜索引擎，提供中文搜索、贴吧、知道等服务</p>
+                <a href="https://www.baidu.com" target="_blank" class="btn btn-primary">访问 百度</a>
+            </div>
+            
+            <!-- DuckDuckGo -->
+            <div class="engine-card">
+                <img src="https://duckduckgo.com/assets/logo_social-media.png" alt="DuckDuckGo" class="engine-logo">
+                <h3 class="engine-name">DuckDuckGo</h3>
+                <p class="engine-desc">注重隐私保护的搜索引擎，不追踪用户搜索行为</p>
+                <a href="https://duckduckgo.com" target="_blank" class="btn btn-primary">访问 DuckDuckGo</a>
+            </div>
+            
+            <!-- Yahoo -->
+            <div class="engine-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yahoo%21_%282019%29.svg/1200px-Yahoo%21_%282019%29.svg.png" alt="Yahoo" class="engine-logo">
+                <h3 class="engine-name">Yahoo</h3>
+                <p class="engine-desc">老牌门户网站，提供搜索、新闻、邮箱等多种服务</p>
+                <a href="https://search.yahoo.com" target="_blank" class="btn btn-primary">访问 Yahoo</a>
+            </div>
+            
+            <!-- Yandex -->
+            <div class="engine-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Yandex.svg/1200px-Yandex.svg.png" alt="Yandex" class="engine-logo">
+                <h3 class="engine-name">Yandex</h3>
+                <p class="engine-desc">俄罗斯最大的搜索引擎，在东欧地区广泛使用</p>
+                <a href="https://yandex.com" target="_blank" class="btn btn-primary">访问 Yandex</a>
+            </div>
+            
+            <!-- Ecosia -->
+            <div class="engine-card">
+                <img src="https://cdn.ecosia.org/assets/images/logo/logo-ecosia-2e7a314fdd.png" alt="Ecosia" class="engine-logo">
+                <h3 class="engine-name">Ecosia</h3>
+                <p class="engine-desc">环保搜索引擎，将广告收入用于植树造林</p>
+                <a href="https://www.ecosia.org" target="_blank" class="btn btn-primary">访问 Ecosia</a>
+            </div>
+            
+            <!-- StartPage -->
+            <div class="engine-card">
+                <img src="https://www.startpage.com/sp/cdn/fetch/https://www.startpage.com/sp/assets/themes/startpage-classic/img/logo/logo-startpage-gradient.svg" alt="StartPage" class="engine-logo">
+                <h3 class="engine-name">StartPage</h3>
+                <p class="engine-desc">结合Google搜索结果与隐私保护的搜索引擎</p>
+                <a href="https://www.startpage.com" target="_blank" class="btn btn-primary">访问 StartPage</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 搜索引擎导航 | 设计现代化、响应式布局 | 快速访问全球主流搜索平台</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const query = document.getElementById('globalSearch').value.trim();
+            if (query) {
+                window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+            }
+        });
+        
+        document.getElementById('globalSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim();
+                if (query) {
+                    window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

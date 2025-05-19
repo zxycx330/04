@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年福州公交重要更新信息</title>
+    <style>
+        :root {
+            --primary-color: #1e88e5;
+            --secondary-color: #0d47a1;
+            --accent-color: #ff5722;
+            --light-color: #f5f5f5;
+            --dark-color: #212121;
+            --success-color: #4caf50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .update-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .update-card {
+            background-color: var(--light-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 4px 4px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .update-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .update-date {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .route-list {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+        
+        .route-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd;
+            display: flex;
+            align-items: center;
+        }
+        
+        .route-list li:before {
+            content: "→";
+            color: var(--primary-color);
+            margin-right: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .resources-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .resource-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .resource-card p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .resources-section {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>2025年福州公交重要更新信息</h1>
+            <p class="subtitle">最新公交线路调整与优化信息汇总</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="update-section">
+            <h2>2025年福州公交线路调整</h2>
+            
+            <div class="update-card">
+                <span class="update-date">2025年2月17日起</span>
+                <h3>地铁接驳16号专线调整</h3>
+                <ul class="route-list">
+                    <li>起讫站点：尤溪洲(西)公交站—达道</li>
+                    <li>发车时间调整：尤溪洲(西)公交站6:30—20:30，达道6:55—20:50</li>
+                    <li>票价不变</li>
+                </ul>
+            </div>
+            
+            <div class="update-card">
+                <span class="update-date">2025年2月17日起</span>
+                <h3>31路、149路等5条线路改为"响铃式停靠"</h3>
+                <ul class="route-list">
+                    <li><strong>31路</strong>：前洋、镜上、兰圃、尚干等12个站点改为响铃式停靠</li>
+                    <li><strong>149路</strong>：半田工业区、五虎山隧道、琯前等7个站点改为响铃式停靠</li>
+                    <li><strong>185快线</strong>：三环湖前河、三环锦绣文华天桥等13个站点改为响铃式停靠</li>
+                    <li><strong>201路</strong>：湖里路口、开发区管委会、船政等9个站点改为响铃式停靠</li>
+                    <li><strong>210路(东南汽车城专线)</strong>：龙祥岛、中院、尚干后福等12个站点改为响铃式停靠</li>
+                </ul>
+            </div>
+            
+            <div class="update-card">
+                <span class="update-date">2025年2月17日起</span>
+                <h3>地铁接驳27号专线调整</h3>
+                <ul class="route-list">
+                    <li>起讫站点调整为：胪雷路北—杜园山</li>
+                    <li>线路走向调整，增设胪雷路北、胪雷小学、市第一总医院仓山院区等11个站点</li>
+                    <li>取消火车南站西广场、火车南站东广场等4个站点</li>
+                    <li>首末班时间：杜园山6:20-19:30，胪雷路北6:50-20:00</li>
+                </ul>
+            </div>
+            
+            <div class="update-card">
+                <span class="update-date">2025年4月19日起</span>
+                <h3>129路与187路公交线路变更</h3>
+                <ul class="route-list">
+                    <li><strong>129路</strong>：新增下楼、鹅峰村、警森苑站点</li>
+                    <li><strong>187路</strong>：新增下楼、鹅峰村、警森苑站点，取消前横路红光路口站点</li>
+                </ul>
+            </div>
+            
+            <div class="update-card">
+                <span class="update-date">2025年1月20日起</span>
+                <h3>138路、141路、186快线调整</h3>
+                <ul class="route-list">
+                    <li>填补闽侯南通中铁城周边公交线网空白</li>
+                    <li>增设中铁江督府、福晟钱隆樽品站点</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="update-section">
+            <h2>福州公交信息查询资源</h2>
+            <p>以下是一些可以查询更多福州公交信息的网站和应用程序：</p>
+            
+            <div class="resources-section">
+                <div class="resource-card">
+                    <h3>福州公交集团官网</h3>
+                    <p>福州市公共交通集团有限责任公司官方网站，提供公交线路查询、票价查询等服务。</p>
+                    <a href="https://www.fz-bus.cn" class="btn" target="_blank">访问网站</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>e福州APP</h3>
+                    <p>福州市官方城市服务APP，提供实时公交查询、地铁查询、乘车码等功能。</p>
+                    <a href="https://www.fuzhou.gov.cn/ztzl/efz/" class="btn" target="_blank">了解更多</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>车来了APP</h3>
+                    <p>提供福州公交实时查询服务，包括车辆位置、到站时间、线路变动提醒等功能。</p>
+                    <a href="https://www.chelaile.net.cn" class="btn" target="_blank">下载APP</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>福州公交网</h3>
+                    <p>提供福州公交线路查询、始末车时间、途经站点等详细信息。</p>
+                    <a href="http://www.chuannei.cn/gongjiao/fuzhou/" class="btn" target="_blank">访问网站</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>闽运定制公交平台</h3>
+                    <p>提供福州定制公交服务，可预订线路、查询车辆到站情况。</p>
+                    <a href="http://dzgj.minyun.com.cn/" class="btn" target="_blank">访问平台</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>福州道路运输发展中心</h3>
+                    <p>福州市道路运输事业发展中心官网，发布公交线路调整公告等信息。</p>
+                    <a href="http://fzjt.fuzhou.gov.cn" class="btn" target="_blank">访问网站</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 福州公交信息中心 | 数据更新至2025年5月</p>
+            <p>本页面信息仅供参考，具体以官方发布为准</p>
+        </div>
+    </footer>
+</body>
+</html>

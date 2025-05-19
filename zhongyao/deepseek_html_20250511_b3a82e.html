@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代化图片展示画廊</title>
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --gray-color: #6c757d;
+            --spacing: 15px;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7ff;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            aspect-ratio: 1 / 1;
+            background-color: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .gallery-title {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .gallery-desc {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .search-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-box {
+            padding: 12px 20px;
+            width: 100%;
+            max-width: 500px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            box-shadow: var(--box-shadow);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-box:focus {
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+            
+            .gallery-caption {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>现代化图片画廊</h1>
+            <p class="subtitle">展示您的50张精美图片</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="search-filter">
+            <input type="text" class="search-box" placeholder="搜索图片...">
+        </div>
+
+        <div class="gallery">
+            <!-- 图片1到50 -->
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x600/4361ee/ffffff?text=Image+1" alt="图片1" class="gallery-img">
+                <div class="gallery-caption">
+                    <h3 class="gallery-title">图片标题1</h3>
+                    <p class="gallery-desc">图片描述文字</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x600/3f37c9/ffffff?text=Image+2" alt="图片2" class="gallery-img">
+                <div class="gallery-caption">
+                    <h3 class="gallery-title">图片标题2</h3>
+                    <p class="gallery-desc">图片描述文字</p>
+                </div>
+            </div>
+            
+            <!-- 重复以上结构直到50张图片 -->
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x600/4895ef/ffffff?text=Image+3" alt="图片3" class="gallery-img">
+                <div class="gallery-caption">
+                    <h3 class="gallery-title">图片标题3</h3>
+                    <p class="gallery-desc">图片描述文字</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x600/4cc9f0/ffffff?text=Image+4" alt="图片4" class="gallery-img">
+                <div class="gallery-caption">
+                    <h3 class="gallery-title">图片标题4</h3>
+                    <p class="gallery-desc">图片描述文字</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x600/3a0ca3/ffffff?text=Image+5" alt="图片5" class="gallery-img">
+                <div class="gallery-caption">
+                    <h3 class="gallery-title">图片标题5</h3>
+                    <p class="gallery-desc">图片描述文字</p>
+                </div>
+            </div>
+            
+            <!-- 继续添加更多图片... -->
+            <!-- 实际使用时，您需要复制上面的gallery-item结构50次 -->
+            <!-- 或者使用JavaScript动态生成 -->
+            
+        </div>
+    </div>
+
+    <footer class="container">
+        <p>© 2023 现代化图片画廊. 保留所有权利.</p>
+    </footer>
+
+    <script>
+        // 这里可以添加JavaScript代码来动态加载图片或实现搜索功能
+        // 示例：动态生成50张图片
+        document.addEventListener('DOMContentLoaded', function() {
+            const gallery = document.querySelector('.gallery');
+            const colors = ['4361ee', '3f37c9', '4895ef', '4cc9f0', '3a0ca3', 
+                           '7209b7', 'b5179e', 'f72585', '560bad', '480ca8'];
+            
+            // 清空示例图片
+            gallery.innerHTML = '';
+            
+            // 生成50张图片
+            for (let i = 1; i <= 50; i++) {
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.innerHTML = `
+                    <img src="https://via.placeholder.com/600x600/${color}/ffffff?text=Image+${i}" alt="图片${i}" class="gallery-img">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-title">图片标题${i}</h3>
+                        <p class="gallery-desc">图片描述文字 ${i}</p>
+                    </div>
+                `;
+                gallery.appendChild(galleryItem);
+            }
+            
+            // 简单搜索功能
+            const searchBox = document.querySelector('.search-box');
+            searchBox.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                const items = document.querySelectorAll('.gallery-item');
+                
+                items.forEach(item => {
+                    const title = item.querySelector('.gallery-title').textContent.toLowerCase();
+                    const desc = item.querySelector('.gallery-desc').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

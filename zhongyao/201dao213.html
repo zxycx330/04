@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福州公交201-220路信息汇总（2025）</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: var(--background);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .badge {
+            background: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .update-info {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>福州公交201-220路信息汇总（2025）</h1>
+    
+    <div class="container">
+        <!-- 201路 -->
+        <div class="card">
+            <h2>201路 <span class="badge">最新更新</span></h2>
+            <p>百度百科：<a href="https://example.com/201路" target="_blank">暂未收录</a></p>
+            <div class="update-info">
+                <strong>2025年动态：</strong>
+                <ul>
+                    <li>增设小芦沙路、海畔西路等站点:cite[10]</li>
+                    <li>定时班车运营（6:30-18:45）:cite[10]</li>
+                    <li>衔接琅岐对台码头，动态调整发车时间:cite[3]:cite[9]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 202路 -->
+        <div class="card">
+            <h2>202路</h2>
+            <p>百度百科：<a href="https://wapbaike.baidu.com/item/福州公交202路/19227580" target="_blank">查看词条</a></p>
+            <div class="update-info">
+                <strong>2025年动态：</strong>
+                <ul>
+                    <li>保持1元一票制，首末班06:30-21:00:cite[2]</li>
+                    <li>优化与地铁5号线接驳站点:cite[2]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 208路 -->
+        <div class="card">
+            <h2>208路</h2>
+            <p>百度百科：<a href="https://example.com/208路" target="_blank">暂未收录</a></p>
+            <div class="update-info">
+                <strong>2025年动态：</strong>
+                <ul>
+                    <li>2024年4月纳入线网优化调整计划:cite[3]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 213路 -->
+        <div class="card">
+            <h2>213路</h2>
+            <p>百度百科：<a href="https://example.com/213路" target="_blank">暂未收录</a></p>
+            <div class="update-info">
+                <strong>2025年动态：</strong>
+                <ul>
+                    <li>优化快线发车时刻表:cite[9]</li>
+                    <li>加强大学城片区接驳:cite[9]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 其他线路提示 -->
+        <div class="card">
+            <h2>其他线路</h2>
+            <div class="update-info">
+                <p>203-207路、209-212路、214-220路<br>
+                暂未收录最新运营信息，建议通过：
+                <a href="https://gzw.fuzhou.gov.cn/">福州国资委官网</a> 或
+                <a href="http://www.gongjiao9.com/">公交网</a> 查询实时信息</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
